@@ -1,9 +1,10 @@
+package JDBC;
 import java.awt.*;
 import java.sql.*;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
-public class ExpenseTracker2 {
+public class ExpenseTracker {
     private JFrame frame;
     private JTable table;
     private DefaultTableModel model;
@@ -11,11 +12,11 @@ public class ExpenseTracker2 {
     private JComboBox<String> categoryBox;
     private JLabel totalLabel;
     private double totalExpense = 0.0;
-    private static final String URL = "jdbc:mysql://localhost:3306/christ";
+    private static final String URL = "jdbc:mysql://localhost:3306/ExpenseTracker";
     private static final String USER = "root";
-    private static final String PASSWORD = "Sridhar@2006";
+    private static final String PASSWORD = "yourpass";
 
-    public ExpenseTracker2() {
+    public ExpenseTracker() {
         frame = new JFrame("Expense Tracker");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(700, 400);
@@ -177,6 +178,6 @@ public class ExpenseTracker2 {
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(ExpenseTracker2::new);
+        SwingUtilities.invokeLater(ExpenseTracker::new);
     }
 }
